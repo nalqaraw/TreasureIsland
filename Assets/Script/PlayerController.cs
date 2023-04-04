@@ -8,9 +8,6 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public Animator animator;
-    public int isWalkingHash;
-    public int isBackwardHash;
-    public int isRunningHash;
     public GameObject key1;
     public GameObject key2;
     public GameObject key3;
@@ -48,10 +45,6 @@ public class PlayerController : MonoBehaviour
 
         MenuFunction();
         animator = GetComponent<Animator>();
-        isWalkingHash = Animator.StringToHash("isWalking");
-        isBackwardHash = Animator.StringToHash("isBackward");
-        isRunningHash = Animator.StringToHash("isRunning");
-
     }
 
     void OnTriggerEnter(Collider coll)
@@ -110,6 +103,8 @@ public class PlayerController : MonoBehaviour
         //  bool isPause = Input.GetKeyDown(KeyCode.Escape);
 
         bool chestOpen = Input.GetKey(KeyCode.O); //press letter "O" to open treasure chest
+
+        Debug.Log(animator.GetBool("isWalking"));
         
         transform.position += transform.forward * speed * Time.deltaTime;
  
@@ -124,43 +119,43 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)) 
         {
-            transform.Rotate(0.0f, -45.0f, 0.0f);
+            transform.Rotate(0.0f, -20.0f, 0.0f);
         }
 
       
         if (Input.GetKeyDown(KeyCode.RightArrow)) 
         {
-            transform.Rotate(0.0f, 45.0f, 0.0f);
+            transform.Rotate(0.0f, 20.0f, 0.0f);
         }
         
         //if player pressed forward key (or up arrow)
         if(forwardPressed)
         {
-            animator.SetBool(isWalkingHash, true);
+            animator.SetBool("isWalking", true);
         }
         if(!forwardPressed)
         {
-            animator.SetBool(isWalkingHash, false);
+            animator.SetBool("isWalking", false);
         }
 
         //if player pressed backward key (or down arrow)
         if(backwardPressed)
         {
-            animator.SetBool(isBackwardHash, true);
+            animator.SetBool("isBackward", true);
         }
         if(!backwardPressed)
         {
-            animator.SetBool(isBackwardHash, false);
+            animator.SetBool("isBackward", false);
         }
 
         //if player pressed the x key 
         if(runningPressed)
         {
-            animator.SetBool(isRunningHash, true);
+            animator.SetBool("isRunning", true);
         }
         if(!runningPressed)
         {
-            animator.SetBool(isRunningHash, false);
+            animator.SetBool("isRunning", false);
         }
 
         if(chestOpen)
