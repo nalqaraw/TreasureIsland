@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject key1;
     public GameObject key2;
     public GameObject key3;
-
+    public float health;
 
     public GameObject menu;
     public GameObject treasure;
@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
         MenuFunction();
         animator = GetComponent<Animator>();
+        health = 100;
     }
 
     void OnTriggerEnter(Collider coll)
@@ -91,7 +92,7 @@ public class PlayerController : MonoBehaviour
         }
         }
 
-        
+     
         public void Update()
         {
             bool isWalking = animator.GetBool("isWalking");
