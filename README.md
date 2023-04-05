@@ -1,4 +1,4 @@
-# Treasure Island Game Prototype README
+# Treasure Island Game README
 
 Treasure Island is a single-player action-adventure game that takes place in a vibrant and dynamic world filled with pirates, dolphins, and treasure. The player takes on the role of a pirate, journeying through the dangerous waters in search of the island. Along the way, players will face many challenges, including battling against the dolphins and solving puzzles to uncover hidden treasures.
 
@@ -38,9 +38,18 @@ To play the Treasure Island game prototype, use the following:
 5. Explore the game world,  and find hidden treasure to become the richest pirate in the sea! 
 6. Follow the on-screen instructions and objectives to progress through the game.
 
+
+## Treasure Island Game Instructions
+1. Use Forward Arrow to Walk Forwards
+2. Use Backward Arrow to Walk Backwards
+3. Use Left and Right Arrows to Rotate Player Left or Right
+4. Use "X" key to Run
+5. Use "Esc" key to Pause
+6. Press SPACE key to open door once key is collected
+
 ## Credits
-- Game developed by [Nadin Alqarawi](https://github.com/nalqaraw).
-- The Treasure Island game prototype uses the following support libraries:
+- Game developed by [Nadin Alqarawi](https://github.com/nalqaraw), [Aikamdeep Malholtra](https://github.com/amalho26), [Hyunseung Kim](https://github.com/hsdavidkim), [Temi Aibana](https://github.com/temiiaibana), [Maaria Shaikh](https://github.com/maariashaikh).
+- The Treasure Island game uses the following support libraries:
 Unity Engine (https://unity.com/)
 C# programming language (https://docs.microsoft.com/en-us/dotnet/csharp/)
 Standard Unity assets and resources
