@@ -104,8 +104,6 @@ public class PlayerController : MonoBehaviour
         //  bool isPause = Input.GetKeyDown(KeyCode.Escape);
 
         bool chestOpen = Input.GetKey(KeyCode.O); //press letter "O" to open treasure chest
-
-        Debug.Log(animator.GetBool("isWalking"));
         
         transform.position += transform.forward * speed * Time.deltaTime;
  
@@ -120,13 +118,13 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)) 
         {
-            transform.Rotate(0.0f, -20.0f, 0.0f);
+            transform.Rotate(0.0f, -10.0f, 0.0f);
         }
 
       
         if (Input.GetKeyDown(KeyCode.RightArrow)) 
         {
-            transform.Rotate(0.0f, 20.0f, 0.0f);
+            transform.Rotate(0.0f, 10.0f, 0.0f);
         }
         
         //if player pressed forward key (or up arrow)
