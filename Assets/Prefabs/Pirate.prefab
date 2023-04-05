@@ -1791,7 +1791,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6097855748571826627}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &4832697648865950633
 SkinnedMeshRenderer:
@@ -8405,7 +8405,7 @@ GameObject:
   - component: {fileID: 883971783}
   m_Layer: 0
   m_Name: Pirate
-  m_TagString: Pirate
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8452,9 +8452,9 @@ Transform:
   - {fileID: 8722775823772332757}
   - {fileID: 3194981353265295276}
   - {fileID: 1359243888316436428}
+  - {fileID: 655144542679154781}
   - {fileID: 4358216039402112390}
   - {fileID: 7964586519765713495}
-  - {fileID: 856957855247914232}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -18.853, z: 0}
@@ -8467,7 +8467,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6905214300974142329}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: dbf83d0251d2e439ba22c0b39bf64dc2, type: 2}
+  m_Avatar: {fileID: 9000000, guid: 18af800b1033e44a09109836801723fd, type: 3}
   m_Controller: {fileID: 9100000, guid: f6ef3085c5087ae40a352ae36cb63891, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -8491,13 +8491,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5986785854262200506}
+  speed: 10
+  damage: 3
+  health: 0
   key1: {fileID: 0}
   key2: {fileID: 0}
   key3: {fileID: 0}
-  menu: {fileID: 0}
-  treasure: {fileID: 0}
+  keyprogress: 0
   KeyHint: {fileID: 0}
-  speed: 10
+  treasure: {fileID: 0}
+  isSwingingHash: 0
+  isFightingHash: 0
+  fight: 0
+  swing: 0
+  menu: {fileID: 0}
 --- !u!143 &883971783
 CharacterController:
   m_ObjectHideFlags: 0
@@ -8910,7 +8917,7 @@ Transform:
   m_Children:
   - {fileID: 5549271524155863706}
   m_Father: {fileID: 6097855748571826627}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7855148568902799498
 GameObject:
@@ -9664,7 +9671,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.13856415, y: 0.010564742, z: 0.009310424}
     m_Extent: {x: 0.024615869, y: 0.028956283, z: 0.019394923}
   m_DirtyAABB: 0
---- !u!1001 &4920676011633443319
+--- !u!1001 &5096610364176962898
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9675,9 +9682,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pirate_Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 4964821453398249397, guid: 9c37fc4fd45b348e68b4c373a1baec72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5741322486784120079, guid: 9c37fc4fd45b348e68b4c373a1baec72, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5741322486784120079, guid: 9c37fc4fd45b348e68b4c373a1baec72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9721,8 +9732,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c37fc4fd45b348e68b4c373a1baec72, type: 3}
---- !u!4 &856957855247914232 stripped
+--- !u!4 &655144542679154781 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5741322486784120079, guid: 9c37fc4fd45b348e68b4c373a1baec72, type: 3}
-  m_PrefabInstance: {fileID: 4920676011633443319}
+  m_PrefabInstance: {fileID: 5096610364176962898}
   m_PrefabAsset: {fileID: 0}

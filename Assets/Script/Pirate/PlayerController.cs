@@ -40,7 +40,8 @@ public class PlayerController : MonoBehaviour
     //Combat Boolean Declarations
     public bool fight = false;
     public bool swing = false;
-    
+    public bool jump = false;
+
     // public bool protect = false; //for shield pickup
 
     /**  Public UI GameObject Declarations **/
@@ -82,48 +83,11 @@ public class PlayerController : MonoBehaviour
 
         //Animator for combat animation
         animator = GetComponent<Animator>();
-        isSwingingHash = Animator.StringToHash("isSwinging");
-        isFightingHash = Animator.StringToHash("isFighting");
-
+        // isSwingingHash = Animator.StringToHash("isSwinging");
+        // isFightingHash = Animator.StringToHash("isFighting");
+        // isJumpingHash = Animator.StringToHash("is");
     }
     
-    public void Fight()
-    {
-        bool isFighting = animator.GetBool("isFighting");
-        bool fightingPressed = Input.GetKey(KeyCode.Q); //press Q to punch
-        
-        //if player pressed Q key 
-        if(fightingPressed)
-        {
-            animator.SetBool(isFightingHash, true);
-            fight = true;
-        }
-        if(!fightingPressed)
-        {
-            animator.SetBool(isFightingHash, false);
-            fight = false;
-        }
-    }
-
-    public void Swing()
-    {
-        bool isSwinging = animator.GetBool("isSwinging");
-        bool swingingPressed = Input.GetKey(KeyCode.S); // press S to swing with the sword        
-        
-        //if player pressed S key 
-        if(swingingPressed)
-        {
-            animator.SetBool(isSwingingHash, true);
-            swing = true;
-        }
-        if(!swingingPressed)
-        {
-            animator.SetBool(isSwingingHash, false);
-            swing = false;
-        }
-    }
-
-
     void OnTriggerEnter(Collider coll)
     {
         if(coll.gameObject==key1)
@@ -195,11 +159,18 @@ public class PlayerController : MonoBehaviour
             bool isJumping = animator.GetBool("isJumping");
             bool jumpingPressed = Input.GetKey(KeyCode.Space);
 
+            bool isFighting = animator.GetBool("isFighting");
+            bool fightingPressed = Input.GetKey(KeyCode.Q); //press Q to punch
+
+            bool isSwinging = animator.GetBool("isSwinging");
+            bool swingingPressed = Input.GetKey(KeyCode.S); // press S to swing with the sword
+
+
         // healthBar.SetHealth(currentHealth); 
 
         bool chestOpen = Input.GetKey(KeyCode.O); //press letter "O" to open treasure chest
 
-        Debug.Log(animator.GetBool("isWalking"));
+        // Debug.Log(animator.GetBool("isWalking"));
         
         transform.position += transform.forward * speed * Time.deltaTime;
  
@@ -251,6 +222,39 @@ public class PlayerController : MonoBehaviour
         if(!runningPressed)
         {
             animator.SetBool("isRunning", false);
+        }
+
+        if(jumpingPressed)
+        {
+            animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
+        }
+
+        //if player pressed Q key 
+        if(fightingPressed)
+        {
+            animator.SetBool("isFighting", true);
+            fight = true;
+        }
+        if(!fightingPressed)
+        {
+            animator.SetBool("isFighting", false);
+            fight = false;
+        }
+
+        //if player pressed S key 
+        if(swingingPressed)
+        {
+            animator.SetBool("isSwinging", true);
+            swing = true;
+        }
+        if(!swingingPressed)
+        {
+            animator.SetBool("isSwinging", false);
+            swing = false;
         }
 
         if(chestOpen)

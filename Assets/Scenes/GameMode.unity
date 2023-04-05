@@ -2965,14 +2965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a624557e5788143a9af54ad5db00293d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 1
-  countDown: 1
-  timer: 0
-  firstMinute: {fileID: 0}
-  secondMinute: {fileID: 0}
-  separator: {fileID: 0}
-  firstSecond: {fileID: 0}
-  secondSecond: {fileID: 0}
 --- !u!1001 &269004541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16654,14 +16646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a624557e5788143a9af54ad5db00293d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 1
-  countDown: 1
-  timer: 0
-  firstMinute: {fileID: 0}
-  secondMinute: {fileID: 0}
-  separator: {fileID: 0}
-  firstSecond: {fileID: 0}
-  secondSecond: {fileID: 0}
 --- !u!1001 &1159356422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24982,14 +24966,6 @@ PrefabInstance:
       propertyPath: treasure
       value: 
       objectReference: {fileID: 448442720}
-    - target: {fileID: 5986785854262200506, guid: 7c6ea8a8f2cfc4c728243c5db2bc0f3b, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 18af800b1033e44a09109836801723fd, type: 3}
-    - target: {fileID: 5986785854262200506, guid: 7c6ea8a8f2cfc4c728243c5db2bc0f3b, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6097855748571826627, guid: 7c6ea8a8f2cfc4c728243c5db2bc0f3b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -25037,10 +25013,6 @@ PrefabInstance:
     - target: {fileID: 6905214300974142329, guid: 7c6ea8a8f2cfc4c728243c5db2bc0f3b, type: 3}
       propertyPath: m_Name
       value: Pirate
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905214300974142329, guid: 7c6ea8a8f2cfc4c728243c5db2bc0f3b, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c6ea8a8f2cfc4c728243c5db2bc0f3b, type: 3}
