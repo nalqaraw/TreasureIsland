@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -22,19 +23,24 @@ public class ShipMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        float moveInput = Input.GetAxis("Vertical");
-        Vector3 moveDirection = transform.forward * moveInput * moveSpeed;
-        rb.AddForce(moveDirection, ForceMode.Acceleration);
+        string currentSceneName = SceneManager.GetActiveScene().name;
 
-        if (moveDirection.magnitude == 0)
+        if (currentSceneName == "ShipPOV")
         {
-            rb.AddForce(-rb.velocity.normalized * brakeStrength);
-        }
+            float moveInput = Input.GetAxis("Vertical");
+            Vector3 moveDirection = transform.forward * moveInput * moveSpeed;
+            rb.AddForce(moveDirection, ForceMode.Acceleration);
 
-        // rotate the ship left or right
-        float turnInput = Input.GetAxis("Horizontal");
-        float turn = turnInput * turnSpeed * Time.deltaTime;
-        Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
-        rb.MoveRotation(rb.rotation * turnRotation);
+            if (moveDirection.magnitude == 0)
+            {
+                rb.AddForce(-rb.velocity.normalized * brakeStrength);
+            }
+
+            // rotate the ship left or right
+            float turnInput = Input.GetAxis("Horizontal");
+            float turn = turnInput * turnSpeed * Time.deltaTime;
+            Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
+            rb.MoveRotation(rb.rotation * turnRotation);
+        }
     }
 }

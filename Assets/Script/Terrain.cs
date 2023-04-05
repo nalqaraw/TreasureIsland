@@ -30,11 +30,10 @@ public class Terrain : MonoBehaviour
         // Get the transform of the collided object
         Transform collidedObjectTransform = collision.gameObject.transform;
 
-       
+        LoadScene("Island");
 
-        // Print the position of the collided object
-        Debug.Log("Collided object position: " + collidedObjectTransform.position);
-
-        LoadScene("GameMode");
+        // Move the player to the collided area
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = collidedObjectTransform.position;
     }
 }

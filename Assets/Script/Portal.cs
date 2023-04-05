@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DockedShip : MonoBehaviour
+public class Portal : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,5 +15,15 @@ public class DockedShip : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        LoadScene("ShipPOV");
     }
 }
