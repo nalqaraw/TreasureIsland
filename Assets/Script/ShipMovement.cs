@@ -11,6 +11,7 @@ public class ShipMovement : MonoBehaviour
     public float buoyancy = 2f;     // how much the ship floats on the water
     public float waterLevel = 0f;   // y-coordinate of the water level
     public float brakeStrength = 10f;
+    public float health = 100f;
 
     // Private variables
     private Rigidbody rb; // Rigidbody component of ship
@@ -41,6 +42,19 @@ public class ShipMovement : MonoBehaviour
             float turn = turnInput * turnSpeed * Time.deltaTime;
             Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
             rb.MoveRotation(rb.rotation * turnRotation);
+        }
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    void Update()
+    {
+        if (health == 0)
+        {
+            LoadScene("GameMode");
         }
     }
 }

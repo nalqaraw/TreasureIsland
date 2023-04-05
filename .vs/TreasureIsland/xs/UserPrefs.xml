@@ -1,16 +1,25 @@
 ﻿<Properties StartupConfiguration="{1565C32B-7CAA-9BDD-B46A-A5D52CD0F1E4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/ShipHealthBar.cs">
     <Files>
-      <File FileName="Assets/Script/ShipMovement.cs" Line="53" Column="44" />
-      <File FileName="Assets/Script/Terrain.cs" Line="5" Column="1" />
-      <File FileName="Assets/Script/DockedShip.cs" Line="23" Column="6" />
-      <File FileName="Assets/Script/PlayerController.cs" Line="166" Column="6" />
-      <File FileName="Assets/Script/Portal.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/ShipMovement.cs" Line="13" Column="38" />
+      <File FileName="Assets/Script/Terrain.cs" />
+      <File FileName="Assets/Script/DockedShip.cs" Line="5" Column="1" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="164" Column="6" />
+      <File FileName="Assets/Script/Portal.cs" />
+      <File FileName="Assets/Script/EnemyBehaviour.cs" Line="20" Column="10" />
+      <File FileName="Assets/Script/Healthbar.cs" Line="20" Column="33" />
+      <File FileName="Assets/Script/ShipHealthBar.cs" Line="20" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="TreasureIsland" expanded="True" selected="True" />
+          <Node name="TreasureIsland" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Script" expanded="True">
+                <Node name="ShipHealthBar.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
