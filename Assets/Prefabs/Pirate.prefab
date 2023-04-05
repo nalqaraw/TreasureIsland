@@ -8405,7 +8405,7 @@ GameObject:
   - component: {fileID: 883971783}
   m_Layer: 0
   m_Name: Pirate
-  m_TagString: Untagged
+  m_TagString: Pirate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8491,9 +8491,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5986785854262200506}
-  isWalkingHash: 0
-  isBackwardHash: 0
-  isRunningHash: 0
   key1: {fileID: 0}
   key2: {fileID: 0}
   key3: {fileID: 0}
