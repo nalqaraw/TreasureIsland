@@ -11834,11 +11834,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881748641}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &883971777 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6905214300974142329, guid: 7c6ea8a8f2cfc4c728243c5db2bc0f3b, type: 3}
-  m_PrefabInstance: {fileID: 1666354965}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &885876289
 GameObject:
   m_ObjectHideFlags: 0
@@ -13092,8 +13087,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a71117b0921420abf6af45392643d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pirate: {fileID: 883971777}
-  offset: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+  distance: 10
+  rotationAmount: 20
+  cameraHeight: 2
+  rotationSpeed: 10
 --- !u!1 &973845005
 GameObject:
   m_ObjectHideFlags: 0
@@ -23255,7 +23253,7 @@ PrefabInstance:
     - target: {fileID: 5986785854262200506, guid: 7c6ea8a8f2cfc4c728243c5db2bc0f3b, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: 1c9e35f838875654ba0b195fbacf590f, type: 3}
+      objectReference: {fileID: 9000000, guid: 18af800b1033e44a09109836801723fd, type: 3}
     - target: {fileID: 5986785854262200506, guid: 7c6ea8a8f2cfc4c728243c5db2bc0f3b, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
