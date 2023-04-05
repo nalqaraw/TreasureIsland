@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
      public Transform player;
     public float distance = 10f;
-    public float rotationAmount = 20f;
+    public float rotationAmount = 10f;
     public float cameraHeight = 2f;
     public float rotationSpeed = 10f; // adjust as needed
 
