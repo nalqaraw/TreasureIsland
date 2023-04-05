@@ -50,31 +50,43 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
-        if(coll.gameObject==key1)
+        if (coll.gameObject == key1)
         {
             Debug.Log("Key1 collected");
             hasKey1 = true;
             Destroy(key1);
         }
-        else if(coll.gameObject==key2)
+        else if (coll.gameObject == key2)
         {
             Debug.Log("Key2 collected");
             hasKey2 = true;
             Destroy(key2);
         }
-        else if(coll.gameObject==key3)
+        else if (coll.gameObject == key3)
         {
             Debug.Log("Key3 collected");
             hasKey3 = true;
             Destroy(key3);
             KeyHint.SetActive(true);
-            StartCoroutine (Wait());
+            StartCoroutine(Wait());
             Debug.Log("hint deactivated");
         }
-}
+        //else if (coll.gameObject.tag == "Treasure")
+        //{
+        //    Destroy(treasure);
+        //    SceneManager.LoadScene("QuizMode");
+        //}
+    }
+    
     public void OpenChest()
     {
-        if(hasKey1)
+        if (hasKey1 && hasKey2 && hasKey3)
+        {
+            Debug.Log("3 Keys collected");
+            Destroy(treasure);
+            SceneManager.LoadScene("QuizMode");
+        }
+        else if(hasKey1)
         {
             Debug.Log("only Key 1 collected");
             // hasKey1 = false;
@@ -88,9 +100,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("3 Keys collected");
             Destroy(treasure);
+            SceneManager.LoadScene("QuizMode");
             // hasKey3 =  false;
         }
-        }
+    }
 
      
         public void Update()
