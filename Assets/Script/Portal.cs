@@ -24,6 +24,10 @@ public class Portal : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if(other.CompareTag("Player"))
+        {
         LoadScene("ShipPOV");
+
+        }
     }
 }
